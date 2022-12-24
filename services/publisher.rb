@@ -12,7 +12,7 @@ class Publisher
     end
 
     def connection
-      @connection ||= Bunny.new.tap(&:start)
+      @connection ||= Bunny.new(ENV['CLOUDAMQP_URL']).tap(&:start)
     end
   end
 end
