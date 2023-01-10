@@ -25,3 +25,4 @@ production:
   url: <%= ENV['DATABASE_URL'] %>
   encoding: unicode
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+  database: amqp_base_production
